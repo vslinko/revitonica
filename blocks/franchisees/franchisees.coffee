@@ -12,3 +12,4 @@ if Meteor.isClient
         "submit .franchisees-form": (event) ->
             event.preventDefault()
             Franchisees.insert prepareFranchise form2js event.target
+            event.target.reset()
