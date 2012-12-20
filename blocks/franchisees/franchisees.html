@@ -1,46 +1,48 @@
 <template name="franchisees">
     <h1>Франчайзинг</h1>
 
-    <table class="table table-bordered table-striped table-hover">
-        <thead>
-            <tr>
-                <th>Формат бизнеса</th>
-                <th>ФИО</th>
-                <th>Город</th>
-                <th>Компания</th>
-                <th>Контактные данные</th>
-                <th>Анкета</th>
-                <th>КП</th>
-                <th>Договор</th>
-                <th>Собеседование</th>
-                <th>Обучение</th>
-                <th>Рег. лист</th>
-                <th>Стоимость обучения</th>
-                <th>Способ оплаты</th>
-                <th>Оплата</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each franchisees}}
+    <div class="franchisees">
+        <table class="table table-bordered table-striped table-hover table-condensed">
+            <thead>
                 <tr>
-                    <td>{{bussinessFormat}}</td>
-                    <td>{{name}}</td>
-                    <td>{{town}}</td>
-                    <td>{{company}}</td>
-                    <td>{{contacts}}</td>
-                    <td>{{form}}</td>
-                    <td>{{boolean kp}}</td>
-                    <td>{{contract}}</td>
-                    <td>{{interview}}</td>
-                    <td>{{null training}}</td>
-                    <td>{{registrationList}}</td>
-                    <td>{{cost}}</td>
-                    <td>{{null paymentMeans}}</td>
-                    <td>{{boolean payed}}</td>
+                    <th>Формат<br>бизнеса</th>
+                    <th>ФИО</th>
+                    <th>Город</th>
+                    <th>Компания</th>
+                    <th>Контактные<br>данные</th>
+                    <th>Анкета</th>
+                    <th>КП</th>
+                    <th>Договор</th>
+                    <th>Собеседование</th>
+                    <th>Обучение</th>
+                    <th>Рег. лист</th>
+                    <th>Стоимость<br>обучения</th>
+                    <th>Способ<br>оплаты</th>
+                    <th>Оплата</th>
                 </tr>
-            {{/each}}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                {{#each franchisees}}
+                    <tr>
+                        <td>{{bussinessFormat}}</td>
+                        <td>{{null name}}</td>
+                        <td>{{null town}}</td>
+                        <td>{{null company}}</td>
+                        <td>{{null contacts}}</td>
+                        <td>{{form}}</td>
+                        <td class="franchisees-boolean">{{boolean kp}}</td>
+                        <td>{{contract}}</td>
+                        <td>{{interview}}</td>
+                        <td>{{null training}}</td>
+                        <td>{{registrationList}}</td>
+                        <td>{{null cost}}</td>
+                        <td>{{null paymentMeans}}</td>
+                        <td class="franchisees-boolean">{{boolean payed}}</td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
 
     {{> franchiseesForm}}
 </template>
