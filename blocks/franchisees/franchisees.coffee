@@ -6,8 +6,11 @@ prepareFranchise = (data) ->
     data
  
 if Meteor.isClient
+    Template.franchisees.rendered = () ->
+        this.find("#bussinessFormat").focus()
+
     Template.franchisees.franchisees = Franchisees.find()
-    
+
     Template.franchiseesForm.events
         "submit .franchisees-form": (event) ->
             event.preventDefault()
