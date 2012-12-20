@@ -1,0 +1,210 @@
+<template name="franchisees">
+    <h1>Франчайзинг</h1>
+
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Формат бизнеса</th>
+                <th>ФИО</th>
+                <th>Город</th>
+                <th>Компания</th>
+                <th>Контактные данные</th>
+                <th>Анкета</th>
+                <th>КП</th>
+                <th>Договор</th>
+                <th>Собеседование</th>
+                <th>Обучение</th>
+                <th>Рег. лист</th>
+                <th>Стоимость обучения</th>
+                <th>Способ оплаты</th>
+                <th>Оплата</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each franchisees}}
+                <tr>
+                    <td>{{bussinessFormat}}</td>
+                    <td>{{name}}</td>
+                    <td>{{town}}</td>
+                    <td>{{company}}</td>
+                    <td>{{contacts}}</td>
+                    <td>{{form}}</td>
+                    <td>{{boolean kp}}</td>
+                    <td>{{contract}}</td>
+                    <td>{{interview}}</td>
+                    <td>{{null training}}</td>
+                    <td>{{registrationList}}</td>
+                    <td>{{cost}}</td>
+                    <td>{{null paymentMeans}}</td>
+                    <td>{{boolean payed}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    {{> franchiseesForm}}
+</template>
+
+<template name="franchiseesForm">
+    <div class="well">
+        <form class="form-horizontal franchisees-form">
+            <div class="control-group">
+                <label class="control-label" for="bussinessFormat">Формат бизнеса</label>
+                <div class="controls">
+                    <select id="bussinessFormat" name="bussinessFormat">
+                        <option>Точка</option>
+                        <option>Класс</option>
+                        <option>Точка-Класс</option>
+                        <option>Представительство</option>
+                        <option>Класс-Пред-во</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="name">ФИО</label>
+                <div class="controls">
+                    <input type="text" id="name" name="name">
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="town">Город</label>
+                <div class="controls">
+                    <input type="text" id="town" name="town">
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="company">Компания</label>
+                <div class="controls">
+                    <input type="text" id="company" name="company">
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="contacts">Контактные данные</label>
+                <div class="controls">
+                    <input type="text" id="contacts" name="contacts">
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="form">Анкета</label>
+                <div class="controls">
+                    <select id="form" name="form">
+                        <option>А отправлено</option>
+                        <option>А не оптравлено</option>
+                        <option>А заполнено</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="kp">КП</label>
+                <div class="controls">
+                    <input type="checkbox" id="kp" name="kp">
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="contract">Договор</label>
+                <div class="controls">
+                    <select id="contract" name="contract">
+                        <option>Д не выслан</option>
+                        <option>Д выслан</option>
+                        <option>Д обсуждение</option>
+                        <option>Д подписан</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="interview">Собеседование</label>
+                <div class="controls">
+                    <select id="interview" name="interview">
+                        <option>С не назначено</option>
+                        <option>СС назначено</option>
+                        <option>СС пройдено</option>
+                        <option>СЛ назначено</option>
+                        <option>СЛ пройдено</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="training">Обучение</label>
+                <div class="controls">
+                    <select id="training" name="training">
+                        <option value="">&mdash;</option>
+                        <option>О график</option>
+                        <option>О группа 1П</option>
+                        <option>О группа 2П</option>
+                        <option>О группа 3П</option>
+                        <option>О группа 4П</option>
+                        <option>О группа 5П</option>
+                        <option>О группа 6П</option>
+                        <option>О группа 7П</option>
+                        <option>О группа 8П</option>
+                        <option>О группа 9П</option>
+                        <option>О группа 10П</option>
+                        <option>О группа 1М</option>
+                        <option>О группа 2М</option>
+                        <option>О группа 3М</option>
+                        <option>О группа 4М</option>
+                        <option>О группа 5М</option>
+                        <option>О группа 6М</option>
+                        <option>О группа 7М</option>
+                        <option>О группа 8М</option>
+                        <option>О группа 9М</option>
+                        <option>О группа 10М</option>
+                        <option>О группа 11М</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="registrationList">Рег. лист</label>
+                <div class="controls">
+                    <select id="registrationList" name="registrationList">
+                        <option>РЛ не выслан</option>
+                        <option>РЛ выслан</option>
+                        <option>РЛ хостел</option>
+                        <option>РЛ самозаселение</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="cost">Стоимость обучения</label>
+                <div class="controls">
+                    <input type="text" id="cost" name="cost">
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="paymentMeans">Способ оплаты</label>
+                <div class="controls">
+                    <select id="paymentMeans" name="paymentMeans">
+                        <option value="">&mdash;</option>
+                        <option>наличные</option>
+                        <option>безнал, Р</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <label class="control-label" for="payed">Оплата</label>
+                <div class="controls">
+                    <input type="checkbox" id="payed" name="payed">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn btn-primary">Добавить</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</template>

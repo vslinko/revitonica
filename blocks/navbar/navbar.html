@@ -1,0 +1,15 @@
+<template name="navbar">
+    <div class="navbar navbar-static-top navbar-inverse">
+        <div class="navbar-inner">
+            <a class="brand" href="/">Revitonica</a>
+            {{#if currentUser}}
+            <ul class="nav">
+                <li><a href="/franchisees">Франчайзинг</a></li>
+            </ul>
+            <ul class="nav pull-right">
+                <li><a href="/logout">Выход</a></li>
+            </ul>
+            {{/if}}
+        </div>
+    </div>
+</template>
