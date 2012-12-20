@@ -30,4 +30,6 @@ if Meteor.isClient
                 if error
                     Session.set "login-error", error.reason
                 else
+                    Session.set "login-error", false
+                    Session.set "login-enabled", false
                     Meteor.Router.to "/"
