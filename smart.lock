@@ -8,6 +8,9 @@
     "basePackages": {
       "router": {
         "version": "0.3.4"
+      },
+      "form2js": {
+        "version": "2.0.0"
       }
     },
     "packages": {
@@ -15,6 +18,11 @@
         "git": "https://github.com/tmeasday/meteor-router.git",
         "tag": "v0.3.4",
         "commit": "8f0d5303de5b93771e91f21f818be27358c2fb30"
+      },
+      "form2js": {
+        "git": "https://github.com/rithis/meteor-form2js",
+        "tag": "v2.0.0",
+        "commit": "23789b8f033af0231bc18de05683c034e28540ba"
       },
       "page-js": {
         "git": "https://github.com/tmeasday/meteor-page-js.git",

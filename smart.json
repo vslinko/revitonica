@@ -3,6 +3,7 @@
         "tag": "v0.5.2"
     },
     "packages": {
-        "router": "0.3.4"
+        "router": "0.3.4",
+        "form2js": "2.0.0"
     }
 }
