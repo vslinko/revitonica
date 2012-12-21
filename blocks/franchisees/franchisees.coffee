@@ -9,7 +9,10 @@ if Meteor.isClient
     Meteor.Router.add "/franchisees", "franchisees"
 
     Template.franchisees.rendered = () ->
-        $("select").select2()
+        $("#bussinessFormat,#form,#contract,#interview,#registrationList").select2()
+        $("#training,#paymentMeans").select2
+            allowClear: true
+
         if document.activeElement is document.body
             this.find("#s2id_bussinessFormat .select2-choice").focus()
 
