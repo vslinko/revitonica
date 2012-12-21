@@ -1,7 +1,6 @@
 if Meteor.isClient
     Meteor.Router.add
         "/": "home"
-        "/franchisees": "franchisees"
         "/logout": () -> Meteor.logout () -> Meteor.Router.to "/"
 
     Meteor.Router.filters

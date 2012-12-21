@@ -6,9 +6,12 @@ prepareFranchise = (data) ->
     data
  
 if Meteor.isClient
+    Meteor.Router.add "/franchisees", "franchisees"
+
     Template.franchisees.rendered = () ->
         $("select").select2()
-        this.find("#s2id_bussinessFormat .select2-choice").focus()
+        if document.activeElement is document.body
+            this.find("#s2id_bussinessFormat .select2-choice").focus()
 
     Template.franchisees.franchisees = Franchisees.find()
 
