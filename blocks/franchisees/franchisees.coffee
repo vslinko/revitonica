@@ -7,7 +7,8 @@ prepareFranchise = (data) ->
  
 if Meteor.isClient
     Template.franchisees.rendered = () ->
-        this.find("#bussinessFormat").focus()
+        $("select").select2()
+        this.find("#s2id_bussinessFormat .select2-choice").focus()
 
     Template.franchisees.franchisees = Franchisees.find()
 

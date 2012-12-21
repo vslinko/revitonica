@@ -11,6 +11,9 @@
       },
       "form2js": {
         "version": "2.0.0"
+      },
+      "select2": {
+        "version": "3.2.0r1"
       }
     },
     "packages": {
@@ -23,6 +26,11 @@
         "git": "https://github.com/rithis/meteor-form2js",
         "tag": "v2.0.0",
         "commit": "23789b8f033af0231bc18de05683c034e28540ba"
+      },
+      "select2": {
+        "git": "https://github.com/rithis/meteor-select2",
+        "tag": "v3.2.0r1",
+        "commit": "9e42e96facea43712374832e88aac6b21926ac90"
       },
       "page-js": {
         "git": "https://github.com/tmeasday/meteor-page-js.git",

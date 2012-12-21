@@ -4,6 +4,7 @@
     },
     "packages": {
         "router": "0.3.4",
-        "form2js": "2.0.0"
+        "form2js": "2.0.0",
+        "select2": "3.2.0r1"
     }
 }
