@@ -3,6 +3,7 @@
         "tag": "v0.5.2"
     },
     "packages": {
+        "bootstrap-with-font-awesome": "0.0.1",
         "router": "0.3.4",
         "form2js": "2.0.0",
         "select2": "3.2.0r1"

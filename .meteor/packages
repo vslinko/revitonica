@@ -6,7 +6,7 @@ accounts-password
 autopublish
 insecure
 
-bootstrap
+bootstrap-with-font-awesome
 coffeescript
 stylus
 

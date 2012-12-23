@@ -6,6 +6,9 @@
   },
   "dependencies": {
     "basePackages": {
+      "bootstrap-with-font-awesome": {
+        "version": "0.0.1"
+      },
       "router": {
         "version": "0.3.4"
       },
@@ -17,6 +20,11 @@
       }
     },
     "packages": {
+      "bootstrap-with-font-awesome": {
+        "git": "https://github.com/alexnotov/meteor-bootstrap-and-font-awesome",
+        "tag": "v0.0.1",
+        "commit": "b5b377b754f3bd8d8f4d04756b98b34accf5ce62"
+      },
       "router": {
         "git": "https://github.com/tmeasday/meteor-router.git",
         "tag": "v0.3.4",
