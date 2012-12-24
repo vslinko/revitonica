@@ -7,10 +7,6 @@ if Meteor.isClient
         
         Session.set "login-enabled", emailValid and passwordValid
 
-    Template.login.rendered = () ->
-        if document.activeElement is document.body
-            this.find("#email").focus()
-
     Template.login.helpers
         disabled: () ->
             if Session.get "login-enabled" then "" else "disabled"
